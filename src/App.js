@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { useState } from "react";
+import CategoryList from "./components/CategoryList";
+import Modal from "./components/Modal";
+import "./styles/style.css";
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="main_heading">
+        <h4 className="title">Bookmark Manager</h4>
+        <button onClick={() => setIsModalOpen(true)}>Add Bookmark</button>
+      </div>
+      <CategoryList />
+      {isModalOpen && (
+        <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen} />
+      )}
     </div>
   );
 }

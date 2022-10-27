@@ -1,0 +1,94 @@
+.main_heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  margin-right: 50px;
+  line-height: 0%;
+}
+
+.modal {
+  position: absolute;
+  top: 150px;
+  left: 500px;
+}
+
+.modal_container {
+  border: 1px solid black;
+  width: 500px;
+  padding: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal_form {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal_input {
+  margin-bottom: 20px;
+  padding: 8px;
+}
+
+.category_input {
+  width: 400px;
+}
+
+.modal_button {
+  margin-left: 10px;
+  padding: 10px 15px;
+}
+
+.modal_action_button {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.action_button {
+  padding: 8px 25px;
+}
+
+.category_data_value {
+  display: flex;
+  justify-content: space-between;
+}
+.category_data_value h5 {
+  line-height: 0px;
+  margin-bottom: 10px;
+}
+.category_title {
+  margin-left: 30px;
+}
+.categoryData_container {
+  width: 300px;
+  border: 1px solid black;
+  padding: 50px;
+  margin-left: 30px;
+  height: 100px;
+  overflow-y: scroll;
+}
+.category_data_value button {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
+.categoryData_onClick {
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  top: 150px;
+  right: 50px;
+}
+
+.categoryData_div {
+  border: 1px solid black;
+  padding: 30px;
+  background-color: aqua;
+  z-index: 1;
+}
