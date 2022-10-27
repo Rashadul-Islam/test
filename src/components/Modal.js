@@ -14,7 +14,7 @@ const Modal = ({ isModalOpen, setIsModalOpen }) => {
     category: "",
   });
 
-  const cat = Array.from(new Set(localData.map((a) => a.category))).map(
+  const cat = Array.from(new Set(localData?.map((a) => a.category)))?.map(
     (id) => {
       return localData.find((a) => a.category === id);
     }

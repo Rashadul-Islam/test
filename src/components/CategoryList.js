@@ -3,7 +3,9 @@ import { useState } from "react";
 import CategoryData from "./CategoryData";
 
 const CategoryList = () => {
-  const data = JSON.parse(localStorage.getItem("data"));
+  const data = localStorage.getItem("data")
+    ? JSON.parse(localStorage.getItem("data"))
+    : [];
 
   const [getData, setGetData] = useState([]);
   const [result, setResult] = useState([]);
@@ -17,8 +19,8 @@ const CategoryList = () => {
     // eslint-disable-next-line
   }, []);
 
-  const cat = Array.from(new Set(data.map((a) => a.category))).map((id) => {
-    return data.find((a) => a.category === id);
+  const cat = Array.from(new Set(data?.map((a) => a.category)))?.map((id) => {
+    return data?.find((a) => a.category === id);
   });
 
   useEffect(() => {
