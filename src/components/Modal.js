@@ -31,11 +31,11 @@ const Modal = ({ isModalOpen, setIsModalOpen }) => {
       }
     }
     if (e.target.name === "category") {
-      if (cat?.map((data) => data === e.target.value)) {
+      if (!cat?.map((data) => data === e.target.value)) {
         setError("Category already exist");
       } else {
         setError("");
-        newInput[e.target.name] = e.target.value;
+        newInput["category"] = e.target.value;
       }
     }
     if (e.target.name === "url") {
